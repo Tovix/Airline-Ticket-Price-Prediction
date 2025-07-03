@@ -123,5 +123,3 @@ def handleDate(data):
         data['date'][i] = float(
             time.mktime(datetime.datetime.strptime(str(data['date'][i]), "%Y-%m-%d %H:%M:%S").timetuple()))
 
-
-def handl

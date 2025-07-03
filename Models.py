@@ -52,6 +52,9 @@ class Model:
             model = self.__linear_regression()
         self.__assigningAttributes(model)
 
+    def displayInfo(self, model_name: str, elapsed_time: int):
+        print(f"{model_name} - Train Score: {self.train_score:.4f}, Test Score: {self.test_score:.4f}, Time: {elapsed_time}s, MSE: {self.MSE:.4f}")
+
     def __lassoRegression(self, alpha: int) -> linear_model:
         lasso_reg = linear_model.Lasso(alpha=alpha)
         lasso_reg.fit(self.__X_train, self.__Y_train)
